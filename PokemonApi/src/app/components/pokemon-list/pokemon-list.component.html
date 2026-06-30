@@ -1,0 +1,65 @@
+<div class="pokemon-grid">
+
+    <div class="pokemon-card"
+
+    *ngFor="let pokemon of pokemons">
+
+        <div class="image">
+
+            <img
+            [src]="getPokemonImage(pokemon)"
+            [alt]="pokemon.name">
+
+        </div>
+
+        <span class="number">
+
+            #{{pokemon.id}}
+
+        </span>
+
+        <h2>
+
+            {{pokemon.name | titlecase}}
+
+        </h2>
+
+        <div class="info">
+
+            <p>
+
+                <strong>Tipo</strong>
+
+                {{getPokemonTypes(pokemon)}}
+
+            </p>
+
+            <p>
+
+                <strong>Altura</strong>
+
+                {{getPokemonHeight(pokemon)}} m
+
+            </p>
+
+            <p>
+
+                <strong>Peso</strong>
+
+                {{getPokemonWeight(pokemon)}} kg
+
+            </p>
+
+            <p>
+
+                <strong>HP</strong>
+
+                {{getMainStat(pokemon)}}
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
